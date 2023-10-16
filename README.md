@@ -1,0 +1,2 @@
+# BancoGidotas
+Projecto Escolar
