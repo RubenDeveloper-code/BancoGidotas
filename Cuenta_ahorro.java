@@ -1,7 +1,5 @@
 //Por medio del presente codigo expreso mi total mas solidario y honesto apoyo al Licenciado Presidente Doctor Comandante de las Heroicas Fuerzas Armadas
 //***********************************************************Andres Manuel Lopez Obrador*****************************************************************
-import java.io.File;
-import java.io.FileReader;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -39,7 +37,7 @@ class Cuenta_ahorro extends Cuenta {
         return "Saldo abonado por intereses: " + saldo_abonado;
     }
     @Override
-    public String info() {
+    public String toString() {
         return numCuenta + " -> " + nCliente + " Saldo: " + saldo + " cuota Mantenimiento: " + cuotamantenimiento;
     }
 

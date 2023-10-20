@@ -18,50 +18,56 @@ class Reportes {
 
     public String reporteGeneral() {
         String reporte = "-------REPORTE GENERAL_______\n";
-        for(Cuenta cuenta : admin.db) {
-            reporte += cuenta.info() + "\n";
-        }
+        reporte += readArray(admin.db);
         return reporte;
     }
 
     public String reporteNumCuenta() {
         Collections.sort(admin.db, new compareNumeroCuenta());
         String reporte = "------REPORTE NUM CUENTA DESENDIENTE------\n";
-        for (int i = admin.db.size()-1; i >= 0; i--) {
-            reporte += admin.db.get(i).info() + "\n";
-        }
+        reporte += readArrayInverse(admin.db);
         return reporte;
     }
 
     public String reporteNombre() {
         Collections.sort(admin.db, new compareNombre());
         String reporte = "------REPORTE NOMBRE------\n";
-        for (Cuenta cuenta : admin.db) {
-            reporte += cuenta.info() + "\n";
-        }
+        reporte += readArray(admin.db);
         return reporte;
     }
 
     public String reporteCuentaAhorro() {
-        ArrayList<Cuenta_ahorro> cA = admin.getSubArrayCuentaAhorro();
-        Collections.sort(cA, new compareNombre());
+        ArrayList<Cuenta> cuentas_ahorro = admin.getSubArrayCuentaAhorro();
+        Collections.sort(cuentas_ahorro, new compareNombre());
         String reporte = "------REPORTE CUENTA AHORRO------\n";
-        for (Cuenta cuenta : cA) {
-            reporte += cuenta.info() + "\n";
-        }
+        reporte += readArray(cuentas_ahorro);
         return reporte;
 
     }
 
     public String reporteCuentaCorriente() {
-        ArrayList<Cuenta_corriente> cA = admin.getSubArrayCuentaCorriente();
-        Collections.sort(cA, new compareNombre());
+        ArrayList<Cuenta> cuenta_corrientes = admin.getSubArrayCuentaCorriente();
+        Collections.sort(cuenta_corrientes, new compareNombre());
         String reporte = "------REPORTE CUENTA CORRIENTE DESENDIENTE------\n";
-        for (int i = cA.size()-1; i >= 0; i--) {
-            reporte += cA.get(i).info() + "\n";
-        }
+        reporte += readArrayInverse(cuenta_corrientes);
         return reporte;
 
+    }
+
+    private String readArray(ArrayList<Cuenta> array) {
+        String res = "";
+        for (Object cuenta : array) {
+            res+=cuenta.toString()+"\n";
+        }
+        return res;
+    }
+
+    private String readArrayInverse(ArrayList<Cuenta> array) {
+        String res = "";
+        for (int i = array.size()-1; i >= 0; i--) {
+            res += array.get(i).toString() + "\n";
+        }
+        return res;
     }
 
 }

@@ -40,7 +40,7 @@ class Cuenta_corriente extends Cuenta {
     }
 
     @Override
-    public String info() {
+    public String toString() {
         return numCuenta + " -> " + nCliente + " Saldo: " + saldo + " Transacciones: " + transacciones + " importe Transacciones: " + importetransacciones;
     }
 

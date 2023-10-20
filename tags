@@ -41,7 +41,7 @@
 Administrador	Administrador.java	/^    public Administrador() {$/;"	m	class:Administrador
 Administrador	Administrador.java	/^class Administrador {$/;"	c
 BancoGidotas	README.md	/^# BancoGidotas$/;"	c
-COMISION__TRANSACCIONES	Administrador.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:Administrador	file:
+COMISION__TRANSACCIONES	GestorRecuperacionYGuardado.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:GestorRecuperacionYGuardado	file:
 CUENTA_AHORRO	Administrador.java	/^    final static int CUENTA_AHORRO = 1, CUENTA_CORRIENTE = 2, LLENO = -1, NOTFOUND = -1;$/;"	f	class:Administrador
 CUENTA_CORRIENTE	Administrador.java	/^    final static int CUENTA_AHORRO = 1, CUENTA_CORRIENTE = 2, LLENO = -1, NOTFOUND = -1;$/;"	f	class:Administrador
 Cuenta	Cuenta.java	/^    public Cuenta(String num_cuenta, String nombre_cliente, float saldo) {$/;"	m	class:Cuenta
@@ -54,17 +54,19 @@ DONE	Administrador.java	/^    private static final int DONE = 0;$/;"	f	class:Adm
 DONE	Movimientos.java	/^    private static final int DONE = 0;$/;"	f	class:Movimientos	file:
 ERROR	Administrador.java	/^    private static final int ERROR = 1;$/;"	f	class:Administrador	file:
 ERROR	Movimientos.java	/^    private static final int ERROR = 1;$/;"	f	class:Movimientos	file:
-IMPORTE_TRANSACCIONES	Administrador.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:Administrador	file:
+GestorRecuperacionYGuardado	GestorRecuperacionYGuardado.java	/^    GestorRecuperacionYGuardado(ArrayList<Cuenta> db) {$/;"	m	class:GestorRecuperacionYGuardado
+GestorRecuperacionYGuardado	GestorRecuperacionYGuardado.java	/^class GestorRecuperacionYGuardado {$/;"	c
+IMPORTE_TRANSACCIONES	GestorRecuperacionYGuardado.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:GestorRecuperacionYGuardado	file:
 LLENO	Administrador.java	/^    final static int CUENTA_AHORRO = 1, CUENTA_CORRIENTE = 2, LLENO = -1, NOTFOUND = -1;$/;"	f	class:Administrador
 Movimientos	Movimientos.java	/^    Movimientos(Administrador admin) {$/;"	m	class:Movimientos
 Movimientos	Movimientos.java	/^class Movimientos {$/;"	c
-NOMBRE	Administrador.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:Administrador	file:
+NOMBRE	GestorRecuperacionYGuardado.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:GestorRecuperacionYGuardado	file:
 NOTFOUND	Administrador.java	/^    final static int CUENTA_AHORRO = 1, CUENTA_CORRIENTE = 2, LLENO = -1, NOTFOUND = -1;$/;"	f	class:Administrador
-NUMERO_CUENTA	Administrador.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:Administrador	file:
+NUMERO_CUENTA	GestorRecuperacionYGuardado.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:GestorRecuperacionYGuardado	file:
 Reportes	Reportes.java	/^    Reportes(Administrador admin) {$/;"	m	class:Reportes
 Reportes	Reportes.java	/^class Reportes {$/;"	c
-SALDO	Administrador.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:Administrador	file:
-ULTIMOMESREGISTRO	Administrador.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:Administrador	file:
+SALDO	GestorRecuperacionYGuardado.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:GestorRecuperacionYGuardado	file:
+ULTIMOMESREGISTRO	GestorRecuperacionYGuardado.java	/^    private static final int NOMBRE = 1, NUMERO_CUENTA = 2, SALDO = 3, COMISION__TRANSACCIONES =/;"	f	class:GestorRecuperacionYGuardado	file:
 abonar	Movimientos.java	/^    public int abonar(String nombre, int abono) {$/;"	m	class:Movimientos
 abonarSaldo	Cuenta.java	/^    public String abonarSaldo(float saldo) {$/;"	m	class:Cuenta
 admin	Movimientos.java	/^    Administrador admin;$/;"	f	class:Movimientos
@@ -78,7 +80,6 @@ buscarCuentaPorNumCuenta	Reportes.java	/^    public String buscarCuentaPorNumCue
 buscarCuentaPorNumeroCuenta	Administrador.java	/^    public String buscarCuentaPorNumeroCuenta(String nCuenta) {$/;"	m	class:Administrador
 calendar	Cuenta_ahorro.java	/^    private GregorianCalendar calendar = new GregorianCalendar();$/;"	f	class:Cuenta_ahorro	file:
 calendar	Cuenta_corriente.java	/^    private GregorianCalendar calendar = new GregorianCalendar();$/;"	f	class:Cuenta_corriente	file:
-cargar	Movimientos.java	/^    public int cargar(Cuenta cuenta, int cargos) {$/;"	m	class:Movimientos
 cargar	Movimientos.java	/^    public int cargar(String nombre, int cargos) {$/;"	m	class:Movimientos
 cargarSaldo	Cuenta.java	/^    public String cargarSaldo(float saldo) {$/;"	m	class:Cuenta
 changeMouth	Cuenta_ahorro.java	/^    private int changeMouth() {$/;"	m	class:Cuenta_ahorro	file:
@@ -95,6 +96,7 @@ compareNumeroCuenta	compareCuentas.java	/^class compareNumeroCuenta implements C
 cuentasMaximas	Administrador.java	/^    int cuentasMaximas;$/;"	f	class:Administrador
 cuotamantenimiento	Cuenta_ahorro.java	/^    private float cuotamantenimiento;$/;"	f	class:Cuenta_ahorro	file:
 db	Administrador.java	/^    ArrayList<Cuenta> db;$/;"	f	class:Administrador
+db	GestorRecuperacionYGuardado.java	/^    ArrayList<Cuenta> db;$/;"	f	class:GestorRecuperacionYGuardado
 db	Movimientos.java	/^    ArrayList<Cuenta> db;$/;"	f	class:Movimientos
 eliminarCuentaPorNombre	Administrador.java	/^    public int eliminarCuentaPorNombre(String nombre) {$/;"	m	class:Administrador
 formatToSave	Cuenta.java	/^    public abstract String formatToSave();$/;"	m	class:Cuenta
@@ -105,8 +107,9 @@ getCuentaPorNumCuenta	Administrador.java	/^    public Cuenta getCuentaPorNumCuen
 getNombreCliente	Cuenta.java	/^    public String getNombreCliente() {$/;"	m	class:Cuenta
 getNumCuenta	Cuenta.java	/^    public String getNumCuenta() {$/;"	m	class:Cuenta
 getSaldo	Cuenta.java	/^    public float getSaldo() {$/;"	m	class:Cuenta
-getSubArrayCuentaAhorro	Administrador.java	/^    public ArrayList<Cuenta_ahorro> getSubArrayCuentaAhorro() {$/;"	m	class:Administrador
-getSubArrayCuentaCorriente	Administrador.java	/^    public ArrayList<Cuenta_corriente> getSubArrayCuentaCorriente() {$/;"	m	class:Administrador
+getSubArrayCuentaAhorro	Administrador.java	/^    public ArrayList<Cuenta> getSubArrayCuentaAhorro() {$/;"	m	class:Administrador
+getSubArrayCuentaCorriente	Administrador.java	/^    public ArrayList<Cuenta> getSubArrayCuentaCorriente() {$/;"	m	class:Administrador
+gryg	Administrador.java	/^    GestorRecuperacionYGuardado gryg;$/;"	f	class:Administrador
 importetransacciones	Cuenta_corriente.java	/^    private float transacciones, importetransacciones;$/;"	f	class:Cuenta_corriente	file:
 info	Cuenta.java	/^    public abstract String info();$/;"	m	class:Cuenta
 info	Cuenta_ahorro.java	/^    public String info() {$/;"	m	class:Cuenta_ahorro
@@ -124,7 +127,9 @@ nombre_cliente	Cuenta.java	/^    private String num_cuenta, nombre_cliente;$/;"	
 numCuenta	Cuenta_ahorro.java	/^    private String nCliente, numCuenta;$/;"	f	class:Cuenta_ahorro	file:
 numCuenta	Cuenta_corriente.java	/^    private String nCliente, numCuenta;$/;"	f	class:Cuenta_corriente	file:
 num_cuenta	Cuenta.java	/^    private String num_cuenta, nombre_cliente;$/;"	f	class:Cuenta	file:
-recuperarCuentas	Administrador.java	/^    private boolean recuperarCuentas() {$/;"	m	class:Administrador	file:
+readArray	Reportes.java	/^    private String readArray(ArrayList<Cuenta> array) {$/;"	m	class:Reportes	file:
+readArrayInverse	Reportes.java	/^    private String readArrayInverse(ArrayList<Cuenta> array) {$/;"	m	class:Reportes	file:
+recuperarCuentas	GestorRecuperacionYGuardado.java	/^    public boolean recuperarCuentas() {$/;"	m	class:GestorRecuperacionYGuardado
 reporteCuentaAhorro	Reportes.java	/^    public String reporteCuentaAhorro() {$/;"	m	class:Reportes
 reporteCuentaCorriente	Reportes.java	/^    public String reporteCuentaCorriente() {$/;"	m	class:Reportes
 reporteGeneral	Reportes.java	/^    public String reporteGeneral() {$/;"	m	class:Reportes
@@ -132,8 +137,8 @@ reporteNombre	Reportes.java	/^    public String reporteNombre() {$/;"	m	class:Re
 reporteNumCuenta	Reportes.java	/^    public String reporteNumCuenta() {$/;"	m	class:Reportes
 saldo	Cuenta.java	/^    float saldo;$/;"	f	class:Cuenta
 saldo	Movimientos.java	/^    public float saldo(String nombre) {$/;"	m	class:Movimientos
-saveCuentas	Administrador.java	/^    private boolean saveCuentas() {$/;"	m	class:Administrador	file:
-saveFormat2Cuenta	Administrador.java	/^    private boolean saveFormat2Cuenta(String line) {$/;"	m	class:Administrador	file:
+saveCuentas	GestorRecuperacionYGuardado.java	/^    public boolean saveCuentas() {$/;"	m	class:GestorRecuperacionYGuardado
+saveFormat2Cuenta	GestorRecuperacionYGuardado.java	/^    public boolean saveFormat2Cuenta(String line) {$/;"	m	class:GestorRecuperacionYGuardado
 setLastLoginMount	Cuenta.java	/^    public void setLastLoginMount(int llm) {$/;"	m	class:Cuenta
 setNombreCliente	Cuenta.java	/^    public void setNombreCliente(String val) {$/;"	m	class:Cuenta
 setNumCuenta	Cuenta.java	/^    public void setNumCuenta(String val) {$/;"	m	class:Cuenta

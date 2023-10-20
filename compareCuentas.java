@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 class compareCuentas {
-    //Estoy 100 % seguro que hay otra manera de hacer esto
+    //Estoy 100 % seguro que hay otra manera de hacer esto pero que weba
 };
 class compareNumeroCuenta implements Comparator<Cuenta> {
     @Override

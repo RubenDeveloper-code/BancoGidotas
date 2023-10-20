@@ -9,7 +9,7 @@ class Movimientos {
         this.db = admin.db;
         this.admin = admin;
     }
-
+//Ovi que tienes que llamar
     public int cargar(String nombre, int cargos) {
         Cuenta cuenta;
         if(!isNull(cuenta = admin.getCuentaPorNombre(nombre))) {
@@ -36,10 +36,6 @@ class Movimientos {
         return ERROR;
     }
 
-    public int cargar(Cuenta cuenta, int cargos) {
-        cuenta.cargarSaldo(cargos);
-        return DONE;
-    }
     private boolean isNull(Object obj) {
         return obj == null;
     }

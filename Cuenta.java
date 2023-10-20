@@ -49,7 +49,6 @@ abstract class Cuenta {
     }
 
     public abstract String formatToSave();
-    public abstract String info();
     public abstract String comisiones();
     public abstract String intereses();
 }
