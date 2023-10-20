@@ -1,10 +1,12 @@
 abstract class Cuenta {
     private String num_cuenta, nombre_cliente;
     float saldo;
+    int lastLoginMount = 0;
 
-    public Cuenta(String num_cuenta, String nombre_cliente) {
+    public Cuenta(String num_cuenta, String nombre_cliente, float saldo) {
         this.nombre_cliente = nombre_cliente;
         this.num_cuenta = num_cuenta;
+        this.saldo = saldo;
     }
 
     public void setNumCuenta(String val) {
@@ -27,6 +29,15 @@ abstract class Cuenta {
         return saldo;
     }
 
+    public void setLastLoginMount(int llm) {
+        lastLoginMount = llm;
+    }
+
+    public void aplicarCargosEIntereses() {
+        comisiones();
+        intereses();
+    }
+
     public String cargarSaldo(float saldo) {
         this.saldo-=saldo;
         return "JESUUUUUUUUUUUUUSSS";
@@ -37,6 +48,8 @@ abstract class Cuenta {
         return "puto :3";
     }
 
+    public abstract String formatToSave();
+    public abstract String info();
     public abstract String comisiones();
     public abstract String intereses();
 }

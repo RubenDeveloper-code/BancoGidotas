@@ -4,10 +4,11 @@ import java.util.GregorianCalendar;
 class Cuenta_corriente extends Cuenta {
     private float transacciones, importetransacciones;
     private GregorianCalendar calendar = new GregorianCalendar();
-    private int lastLoginMount;
-    Cuenta_corriente(String num_cuenta, String nombre_cliente, float transacciones, float importetransacciones) {
-        //recuperar mes de informacion de archivo
-        super(num_cuenta,nombre_cliente);
+    private String nCliente, numCuenta;
+    Cuenta_corriente(String num_cuenta, String nombre_cliente,float saldo, float transacciones, float importetransacciones) {
+        super(num_cuenta,nombre_cliente,saldo);
+        nCliente = nombre_cliente;
+        numCuenta = num_cuenta;
         this.transacciones = transacciones;
         this.importetransacciones = importetransacciones;
     }
@@ -19,6 +20,7 @@ class Cuenta_corriente extends Cuenta {
         if((difference = changeMouth())>0) {
             cargarSaldo(saldo_cargado = difference * (transacciones * importetransacciones));
         }
+        System.out.println("saldo cargado" + saldo_cargado);
         return "Comisiones no se tu acomodale uwu: " + saldo_cargado;
     }
 
@@ -33,7 +35,18 @@ class Cuenta_corriente extends Cuenta {
             float interesesTT = p_intereses * getSaldo();
             abonarSaldo(saldo_abonado = difference*(interesesTT));
         }
+        System.out.println("saldo abonado" + saldo_abonado);
         return "Wey a que olera el peje?: " + saldo_abonado;
+    }
+
+    @Override
+    public String info() {
+        return numCuenta + " -> " + nCliente + " Saldo: " + saldo + " Transacciones: " + transacciones + " importe Transacciones: " + importetransacciones;
+    }
+
+    @Override
+    public String formatToSave() {
+        return "C:" + numCuenta + ":" + nCliente + ":" + saldo + ":" + transacciones + ":" + importetransacciones + ":" + calendar.get(Calendar.MONTH);
     }
 
     private int changeMouth() {

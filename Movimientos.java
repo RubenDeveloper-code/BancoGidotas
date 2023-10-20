@@ -5,8 +5,8 @@ class Movimientos {
     private static final int DONE = 0;
     ArrayList<Cuenta> db;
     Administrador admin;
-    Movimientos(ArrayList<Cuenta> db, Administrador admin) {
-        this.db = db;
+    Movimientos(Administrador admin) {
+        this.db = admin.db;
         this.admin = admin;
     }
 
