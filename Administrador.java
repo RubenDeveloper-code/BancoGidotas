@@ -49,8 +49,6 @@ class Administrador {
         Cuenta cuenta;
         if(!isNull(cuenta = getCuentaPorNombre(nombre))) {
             db.add(newData);
-            newData.setNombreCliente(cuenta.getNombreCliente());
-            newData.setNumCuenta(cuenta.getNumCuenta());
             db.remove(cuenta);
             return DONE;
         }

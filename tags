@@ -111,9 +111,6 @@ getSubArrayCuentaAhorro	Administrador.java	/^    public ArrayList<Cuenta> getSub
 getSubArrayCuentaCorriente	Administrador.java	/^    public ArrayList<Cuenta> getSubArrayCuentaCorriente() {$/;"	m	class:Administrador
 gryg	Administrador.java	/^    GestorRecuperacionYGuardado gryg;$/;"	f	class:Administrador
 importetransacciones	Cuenta_corriente.java	/^    private float transacciones, importetransacciones;$/;"	f	class:Cuenta_corriente	file:
-info	Cuenta.java	/^    public abstract String info();$/;"	m	class:Cuenta
-info	Cuenta_ahorro.java	/^    public String info() {$/;"	m	class:Cuenta_ahorro
-info	Cuenta_corriente.java	/^    public String info() {$/;"	m	class:Cuenta_corriente
 intereses	Cuenta.java	/^    public abstract String intereses();$/;"	m	class:Cuenta
 intereses	Cuenta_ahorro.java	/^    public String intereses() {$/;"	m	class:Cuenta_ahorro
 intereses	Cuenta_corriente.java	/^    public String intereses() {$/;"	m	class:Cuenta_corriente
@@ -144,5 +141,7 @@ setNombreCliente	Cuenta.java	/^    public void setNombreCliente(String val) {$/;
 setNumCuenta	Cuenta.java	/^    public void setNumCuenta(String val) {$/;"	m	class:Cuenta
 setSaldo	Cuenta.java	/^    public void setSaldo(float val) {$/;"	m	class:Cuenta
 tests	tests.java	/^class tests {$/;"	c
+toString	Cuenta_ahorro.java	/^    public String toString() {$/;"	m	class:Cuenta_ahorro
+toString	Cuenta_corriente.java	/^    public String toString() {$/;"	m	class:Cuenta_corriente
 transacciones	Cuenta_corriente.java	/^    private float transacciones, importetransacciones;$/;"	f	class:Cuenta_corriente	file:
 updateCuentaPorNombre	Administrador.java	/^    public int updateCuentaPorNombre(String nombre, Cuenta newData) {$/;"	m	class:Administrador
