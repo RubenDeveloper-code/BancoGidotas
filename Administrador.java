@@ -18,18 +18,10 @@ class Administrador {
     public void close() {
         gryg.saveCuentas();
     }
-    //Alta cuenta ahorro
-    public int altaCuenta(String num_cuenta, String nombre_cliente,float saldo, float comision) {
-        if(buscarCuentaPorNumeroCuenta(num_cuenta) == "-1") {
-            db.add(new Cuenta_ahorro(num_cuenta, nombre_cliente,saldo,comision));
-            return DONE;
-        }
-        return ERROR;
-    }
-    //Alta cuenta corriente
-    public int altaCuenta(String num_cuenta, String nombre_cliente,float saldo, float transacciones, float importetransacciones) {
-        if(buscarCuentaPorNumeroCuenta(num_cuenta) == "-1") {
-            db.add(new Cuenta_corriente(num_cuenta, nombre_cliente,saldo,transacciones,importetransacciones ));
+
+    public int altaCuenta(Cuenta cuenta) {
+        if(buscarCuentaPorNumeroCuenta(cuenta.getNumCuenta())!="-1") {
+            db.add(cuenta);
             return DONE;
         }
         return ERROR;
@@ -43,7 +35,6 @@ class Administrador {
         }
         return ERROR;
     }
-
     //Aca puedes declarar un cuenta_ahooro o cuenta_corriente lo pasas y ya estufas
     public int updateCuentaPorNombre(String nombre, Cuenta newData) {
         Cuenta cuenta;

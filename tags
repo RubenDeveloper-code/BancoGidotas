@@ -48,7 +48,7 @@ Cuenta	Cuenta.java	/^    public Cuenta(String num_cuenta, String nombre_cliente,
 Cuenta	Cuenta.java	/^abstract class Cuenta {$/;"	c
 Cuenta_ahorro	Cuenta_ahorro.java	/^    Cuenta_ahorro(String num_cuenta, String nombre_cliente,float saldo,float cuotamantenimiento)/;"	m	class:Cuenta_ahorro
 Cuenta_ahorro	Cuenta_ahorro.java	/^class Cuenta_ahorro extends Cuenta {$/;"	c
-Cuenta_corriente	Cuenta_corriente.java	/^    Cuenta_corriente(String num_cuenta, String nombre_cliente,float saldo, float transacciones, /;"	m	class:Cuenta_corriente
+Cuenta_corriente	Cuenta_corriente.java	/^    Cuenta_corriente(String num_cuenta, String nombre_cliente,float saldo, float importetransacc/;"	m	class:Cuenta_corriente
 Cuenta_corriente	Cuenta_corriente.java	/^class Cuenta_corriente extends Cuenta {$/;"	c
 DONE	Administrador.java	/^    private static final int DONE = 0;$/;"	f	class:Administrador	file:
 DONE	Movimientos.java	/^    private static final int DONE = 0;$/;"	f	class:Movimientos	file:
@@ -71,8 +71,7 @@ abonar	Movimientos.java	/^    public int abonar(String nombre, int abono) {$/;"	
 abonarSaldo	Cuenta.java	/^    public String abonarSaldo(float saldo) {$/;"	m	class:Cuenta
 admin	Movimientos.java	/^    Administrador admin;$/;"	f	class:Movimientos
 admin	Reportes.java	/^    Administrador admin;$/;"	f	class:Reportes
-altaCuenta	Administrador.java	/^    public int altaCuenta(String num_cuenta, String nombre_cliente,float saldo, float comision) /;"	m	class:Administrador
-altaCuenta	Administrador.java	/^    public int altaCuenta(String num_cuenta, String nombre_cliente,float saldo, float transaccio/;"	m	class:Administrador
+altaCuenta	Administrador.java	/^    public int altaCuenta(Cuenta cuenta) {$/;"	m	class:Administrador
 aplicarCargosEIntereses	Cuenta.java	/^    public void aplicarCargosEIntereses() {$/;"	m	class:Cuenta
 buscarCuentaPorNombre	Administrador.java	/^    public String buscarCuentaPorNombre(String nombre) {$/;"	m	class:Administrador
 buscarCuentaPorNombre	Reportes.java	/^    public String buscarCuentaPorNombre(String nombre) {$/;"	m	class:Reportes
@@ -118,11 +117,7 @@ isNull	Administrador.java	/^    private boolean isNull(Object obj) {$/;"	m	class
 isNull	Movimientos.java	/^    private boolean isNull(Object obj) {$/;"	m	class:Movimientos	file:
 lastLoginMount	Cuenta.java	/^    int lastLoginMount = 0;$/;"	f	class:Cuenta
 main	tests.java	/^    public static void main(String[] args) {$/;"	m	class:tests
-nCliente	Cuenta_ahorro.java	/^    private String nCliente, numCuenta;$/;"	f	class:Cuenta_ahorro	file:
-nCliente	Cuenta_corriente.java	/^    private String nCliente, numCuenta;$/;"	f	class:Cuenta_corriente	file:
 nombre_cliente	Cuenta.java	/^    private String num_cuenta, nombre_cliente;$/;"	f	class:Cuenta	file:
-numCuenta	Cuenta_ahorro.java	/^    private String nCliente, numCuenta;$/;"	f	class:Cuenta_ahorro	file:
-numCuenta	Cuenta_corriente.java	/^    private String nCliente, numCuenta;$/;"	f	class:Cuenta_corriente	file:
 num_cuenta	Cuenta.java	/^    private String num_cuenta, nombre_cliente;$/;"	f	class:Cuenta	file:
 readArray	Reportes.java	/^    private String readArray(ArrayList<Cuenta> array) {$/;"	m	class:Reportes	file:
 readArrayInverse	Reportes.java	/^    private String readArrayInverse(ArrayList<Cuenta> array) {$/;"	m	class:Reportes	file:
@@ -140,6 +135,7 @@ setLastLoginMount	Cuenta.java	/^    public void setLastLoginMount(int llm) {$/;"
 setNombreCliente	Cuenta.java	/^    public void setNombreCliente(String val) {$/;"	m	class:Cuenta
 setNumCuenta	Cuenta.java	/^    public void setNumCuenta(String val) {$/;"	m	class:Cuenta
 setSaldo	Cuenta.java	/^    public void setSaldo(float val) {$/;"	m	class:Cuenta
+setTransacciones	Cuenta_corriente.java	/^    public int setTransacciones(int transacciones) {$/;"	m	class:Cuenta_corriente
 tests	tests.java	/^class tests {$/;"	c
 toString	Cuenta_ahorro.java	/^    public String toString() {$/;"	m	class:Cuenta_ahorro
 toString	Cuenta_corriente.java	/^    public String toString() {$/;"	m	class:Cuenta_corriente

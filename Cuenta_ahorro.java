@@ -6,11 +6,8 @@ import java.util.GregorianCalendar;
 class Cuenta_ahorro extends Cuenta {
     private float cuotamantenimiento;
     private GregorianCalendar calendar = new GregorianCalendar();
-    private String nCliente, numCuenta;
     Cuenta_ahorro(String num_cuenta, String nombre_cliente,float saldo,float cuotamantenimiento) {
         super(num_cuenta,nombre_cliente,saldo);
-        nCliente = nombre_cliente;
-        numCuenta = num_cuenta;
         this.cuotamantenimiento = cuotamantenimiento;
     }
 
@@ -38,12 +35,12 @@ class Cuenta_ahorro extends Cuenta {
     }
     @Override
     public String toString() {
-        return numCuenta + " -> " + nCliente + " Saldo: " + saldo + " cuota Mantenimiento: " + cuotamantenimiento;
+        return super.getNumCuenta() + " -> " + super.getNombreCliente() + " Saldo: " + saldo + " cuota Mantenimiento: " + cuotamantenimiento;
     }
 
     @Override
     public String formatToSave() {
-        return "A:" + numCuenta + ":" + nCliente + ":" + saldo + ":" + cuotamantenimiento + ":_:" + calendar.get(Calendar.MONTH);
+        return "A:" + super.getNumCuenta() + ":" + super.getNombreCliente() + ":" + saldo + ":" + cuotamantenimiento + ":_:" + calendar.get(Calendar.MONTH);
     }
 
     private int changeMouth() {

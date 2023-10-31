@@ -41,8 +41,9 @@ class GestorRecuperacionYGuardado {
             return true;
         }
         if(elementos[0].equals("C")) {
-            Cuenta_corriente cuenta_corriente = new Cuenta_corriente(elementos[NOMBRE], elementos[NUMERO_CUENTA], Float.parseFloat(elementos[SALDO]),Float.parseFloat(elementos[COMISION__TRANSACCIONES]), Float.parseFloat(elementos[IMPORTE_TRANSACCIONES]));
+            Cuenta_corriente cuenta_corriente = new Cuenta_corriente(elementos[NOMBRE], elementos[NUMERO_CUENTA], Float.parseFloat(elementos[SALDO]), Float.parseFloat(elementos[IMPORTE_TRANSACCIONES]));
             cuenta_corriente.setLastLoginMount(Integer.parseInt(elementos[ULTIMOMESREGISTRO]));
+            cuenta_corriente.setTransacciones(Integer.parseInt(elementos[IMPORTE_TRANSACCIONES]));
             cuenta_corriente.aplicarCargosEIntereses();
             db.add(cuenta_corriente);
             return true;

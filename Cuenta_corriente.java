@@ -4,12 +4,8 @@ import java.util.GregorianCalendar;
 class Cuenta_corriente extends Cuenta {
     private float transacciones, importetransacciones;
     private GregorianCalendar calendar = new GregorianCalendar();
-    private String nCliente, numCuenta;
-    Cuenta_corriente(String num_cuenta, String nombre_cliente,float saldo, float transacciones, float importetransacciones) {
+    Cuenta_corriente(String num_cuenta, String nombre_cliente,float saldo, float importetransacciones) {
         super(num_cuenta,nombre_cliente,saldo);
-        nCliente = nombre_cliente;
-        numCuenta = num_cuenta;
-        this.transacciones = transacciones;
         this.importetransacciones = importetransacciones;
     }
 
@@ -39,14 +35,19 @@ class Cuenta_corriente extends Cuenta {
         return "Wey a que olera el peje?: " + saldo_abonado;
     }
 
+    public int setTransacciones(int transacciones) {
+        this.transacciones = transacciones;
+        return 1;
+    }
+
     @Override
     public String toString() {
-        return numCuenta + " -> " + nCliente + " Saldo: " + saldo + " Transacciones: " + transacciones + " importe Transacciones: " + importetransacciones;
+        return super.getNumCuenta() + " -> " + super.getNombreCliente() + " Saldo: " + saldo + " Transacciones: " + transacciones + " importe Transacciones: " + importetransacciones;
     }
 
     @Override
     public String formatToSave() {
-        return "C:" + numCuenta + ":" + nCliente + ":" + saldo + ":" + transacciones + ":" + importetransacciones + ":" + calendar.get(Calendar.MONTH);
+        return "C:" +  super.getNumCuenta() + ":" + super.getNombreCliente() + ":" + saldo + ":" + transacciones + ":" + importetransacciones + ":" + calendar.get(Calendar.MONTH);
     }
 
     private int changeMouth() {

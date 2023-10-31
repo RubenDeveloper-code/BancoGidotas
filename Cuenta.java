@@ -40,12 +40,12 @@ abstract class Cuenta {
 
     public String cargarSaldo(float saldo) {
         this.saldo-=saldo;
-        return "JESUUUUUUUUUUUUUSSS";
+        return "Saldo cargado";
     }
 
     public String abonarSaldo(float saldo) {
         this.saldo+=saldo;
-        return "puto :3";
+        return "Saldo abonado";
     }
 
     public abstract String formatToSave();
